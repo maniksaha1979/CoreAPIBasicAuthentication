@@ -53,6 +53,7 @@ namespace CoreWebAPIBasicAuthentication
                 .AllowCredentials());
 
             app.UseAuthentication();
+            app.UseMiddleware<BasicAuthMiddleware>("maniksaha.com");
 
             app.UseMvc();
         }
